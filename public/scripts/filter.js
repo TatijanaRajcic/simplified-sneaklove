@@ -13,7 +13,6 @@ function handleChange(e) {
 
   getSneakers(tags)
     .then((res) => {
-      debugger;
       displaySneakers(res.data);
     })
     .catch((err) => {
@@ -22,7 +21,6 @@ function handleChange(e) {
 }
 
 function sneakerCard(sneaker) {
-  debugger;
   let card = `<a href="/one-product/${sneaker._id}" class="product-item-wrapper">
     <div class="product-img">
         <img src="${sneaker.image}" alt="${sneaker.name} : what a nice pair of kicks">
@@ -48,7 +46,6 @@ function displaySneakers(sneakers) {
 }
 
 function getSneakers(tags) {
-  debugger;
   return axios.get("/api/sneakers/collection", {
     params: {
       // axios.get(url, options)
